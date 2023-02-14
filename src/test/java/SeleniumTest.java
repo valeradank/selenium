@@ -43,7 +43,7 @@ public class SeleniumTest {
         driver.findElement(By.tagName("label")).click();
         driver.findElement(By.className("button__text")).click();
         String actual = "  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
-        String expected = driver.findElement(By.className("Success_successBlock__2L3Cw")).getText();
+        String expected = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         Assertions.assertEquals(expected, actual);
     }
 
